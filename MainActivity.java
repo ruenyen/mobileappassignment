@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-
         FragmentManager fragmentManager = getSupportFragmentManager();
         int id = item.getItemId();
 
@@ -84,7 +83,6 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_account) {
             LoginFragment fragment = new LoginFragment();
-
             fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
         }
 

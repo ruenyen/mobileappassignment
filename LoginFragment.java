@@ -22,6 +22,7 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         Button buttonRegister = (Button) view.findViewById(R.id.buttonRegister);
+        Button buttonForgotPassword = (Button) view.findViewById(R.id.buttonForgot);
 
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +34,18 @@ public class LoginFragment extends Fragment {
                 ft.commit();
             }
         });
+
+        buttonForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ForgotPasswordFragment fpf = new ForgotPasswordFragment();
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.frame_container, fpf);
+                ft.addToBackStack(null);
+                ft.commit();
+            }
+        });
+
         return view;
     }
 }
