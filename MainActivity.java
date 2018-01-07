@@ -32,6 +32,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        LoginFragment fragment = new LoginFragment();
+        fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
     }
 
     @Override
@@ -82,8 +86,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_assessment) {
 
         } else if (id == R.id.nav_account) {
-            LoginFragment fragment = new LoginFragment();
-            fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
+            ViewProfileFragment vpf = new ViewProfileFragment();
+            fragmentManager.beginTransaction().replace(R.id.frame_container, vpf).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
