@@ -24,6 +24,7 @@ public class LoginFragment extends Fragment {
         Button buttonRegister = (Button) view.findViewById(R.id.buttonRegister);
         Button buttonForgotPassword = (Button) view.findViewById(R.id.buttonForgot);
 
+        //register button
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,6 +36,7 @@ public class LoginFragment extends Fragment {
             }
         });
 
+        //forgot password button
         buttonForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
